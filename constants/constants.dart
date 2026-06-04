@@ -1,9 +1,15 @@
-class Constants {
-  static const String googleDocumentId =
-      '1jxKN5uanyQ3f-feNEndzfdbvYPgF6G1oeTKWsND25uY';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-  static const String googleDocsUrl =
+class Constants {
+  static final googleDocumentId = dotenv.get('googleDocumentId');
+
+  static final String googleDocsUrl =
       "https://docs.google.com/document/d/$googleDocumentId/edit";
 
-  static const String googleKeyCredentialPath = "chezpol-6877b86c3db2.json";
+  static final String googleKeyCredentialPath =
+      dotenv.get('google_credentials');
+
+  static final String apiKey = dotenv.get('mailjet_api_key');
+
+  static final String secretKey = dotenv.get('mailjet_secret_key');
 }

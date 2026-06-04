@@ -2,10 +2,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 
-class MailjetImageService {
-  final String _apiKey = '825e3bd19c04f224d53476f7bd1959d9';
-  final String _secretKey = '5b44621a24931e112930951059c68705';
+import '../constants/constants.dart';
 
+class MailjetImageService {
   Future<String?> uploadImage(String googleUrl) async {
     try {
       // 1. Télécharger l'image depuis Google
@@ -20,7 +19,8 @@ class MailjetImageService {
               ? 'gif'
               : 'jpg';
 
-      final credentials = base64Encode(utf8.encode('$_apiKey:$_secretKey'));
+      final credentials = base64Encode(
+          utf8.encode('${Constants.apiKey}:${Constants.secretKey}'));
 
       // 2. Upload sur MailJet
       final request = http.MultipartRequest(

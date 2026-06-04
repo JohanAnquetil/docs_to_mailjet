@@ -1,13 +1,20 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
-class MailjetService {
-  final String _apiKey = '825e3bd19c04f224d53476f7bd1959d9';
-  final String _secretKey = '5b44621a24931e112930951059c68705';
+import '../constants/constants.dart';
 
+class MailjetService {
   Future<void> createCampaignDraft(Map<String, String> variables) async {
-    final credentials = base64Encode(utf8.encode('$_apiKey:$_secretKey'));
+    final now = DateTime.now();
+    final date = '${now.day}/${now.month}/${now.year}';
+    final name = dotenv.get('newsletter_name');
+    final int contactListId = int.parse((dotenv.get('contact_id_list')));
+
+    final credentials = base64Encode(
+      utf8.encode('${Constants.apiKey}:${Constants.secretKey}'),
+    );
     final template = await _loadTemplate();
     final htmlBody = _buildTemplateHtml(variables, template);
 
@@ -20,18 +27,16 @@ class MailjetService {
       },
       body: jsonEncode({
         'Locale': 'fr_FR',
-        'Sender': 'Chez Pol', // ✅ champ Sender
-        'SenderEmail': 'pedrolitau@hotmail.com',
+        'Sender': dotenv.get('sender_name'),
+        'SenderEmail': dotenv.get('sender_email'),
         'EditMode': 'html2',
-        'Subject':
-            'Chez Pol du ${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}',
-        'ContactsListID': 10519270,
-        'Title':
-            'Chez Pol - ${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}',
+        'Subject': '$name du $date',
+        'ContactsListID': contactListId,
+        'Title': '$name du $date',
       }),
     );
 
-    final campaignData = jsonDecode(campaignResponse.body); // ← monte ici
+    final campaignData = jsonDecode(campaignResponse.body);
     final campaignId = campaignData['Data'][0]['ID'];
 
     // 2. Injecter le contenu HTML avec les variables

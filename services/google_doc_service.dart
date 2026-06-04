@@ -4,7 +4,7 @@ import 'package:googleapis_auth/auth_io.dart';
 class GoogleDocsService {
   final AuthClient client;
 
-  GoogleDocsService(this.client); // le client est injecté
+  GoogleDocsService(this.client);
 
   Future<Document> getDocument(String documentId) async {
     final api = DocsApi(client);
