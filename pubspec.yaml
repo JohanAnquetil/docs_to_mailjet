@@ -1,0 +1,14 @@
+name: chez_pol_script
+version: 1.0.0
+
+environment:
+  sdk: ^3.0.0
+dependencies:
+  dotenv: ^4.2.0
+  googleapis: ^16.0.0
+  googleapis_auth: ^2.3.1
+  html: ^0.15.6
+  http: ^1.6.0
+  http_parser: ^4.1.2
+
+

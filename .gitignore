@@ -13,6 +13,7 @@ doc/api/
 
 # dotenv environment variables file
 .env
+chezpol-6877b86c3db2.json
 
 # Avoid committing generated Javascript files:
 *.dart.js

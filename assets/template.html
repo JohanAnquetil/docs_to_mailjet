@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Pol</title>
+  <style>
+    p { margin: 0 0 8px 0; }
+    ul { margin: 0 0 8px 0; padding-left: 20px; }
+    li { margin: 0 0 12px 0; line-height: 1.5; }
+        li[style*="center"] {
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+    }
+    a { color: inherit; text-decoration: underline; }
+    /* ul { margin: 0 0 8px 0; padding-left: 20px; } */
+    h2 { font-size: 18px; color: #e8412a; font-weight: bold; margin: 16px 0 8px 0; }
+    h3 { font-size: 8px; color: #666666; font-weight: normal; font-style: italic; margin: 4px 0 12px 0; }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family: Georgia, serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f4f4;">
+    <tr>
+      <td align="center" style="padding: 20px 0;">
+
+        <!-- CONTAINER -->
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; max-width:600px;">
+          
+          <!-- HASHTAGS -->
+          <tr>
+            <td style="padding: 16px 32px 8px 32px; font-family: Georgia, serif; font-size: 12px; text-align:center; color: #1a1a1a;">
+              {{hashtags}}
+            </td>
+          </tr>
+
+          <!-- HEADER -->
+          <tr>
+            <td style="padding: 0;">
+              <img src="https://13n55.mjt.lu/img2/13n55/f8cbf15d-7d14-491f-aba0-243342abfb3e/content"
+                   alt="Chez Pol" width="600" style="display:block; width:100%; max-width:600px;" />
+            </td>
+          </tr>
+
+          <!-- INTRO -->
+          <tr>
+            <td style="padding: 24px 32px 16px 32px; font-family: Georgia, serif; font-size: 16px; line-height: 1.6; color: #1a1a1a;">
+              {{intro}}
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- SOMMAIRE -->
+
+          <tr>
+            <td style="padding: 24px 0 0 0;">
+              <img src="https://13n55.mjt.lu/img2/13n55/147de6f8-3185-4bc0-8c1e-1e05120e5008/content"
+                  alt="Le menu du jour" width="600" style="display:block; width:100%; max-width:600px;" />
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding: 16px 32px 24px 32px; font-family: Georgia, serif; font-size: 14px; line-height: 1.8; color: #1a1a1a;">
+              {{sommaire}}
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- RUBRIQUE : AU COMPTOIR (sans bordure) -->
+          <tr>
+            <td style="padding: 24px 0 0 0;">
+              <img src="https://13n55.mjt.lu/img2/13n55/3ca4f1dd-c701-4eeb-8774-5db7936e2427/content"
+                   alt="Au comptoir" width="600" style="display:block; width:100%; max-width:600px;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.7; color: #1a1a1a;">
+              {{au_comptoir}}
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- RUBRIQUE : YOUPOL (bordure rouge épaisse bord à bord) -->
+          <tr>
+            <td style="padding: 24px 0 0 0; border-left: 4px solid #e8412a; border-right: 4px solid #e8412a; border-top: 4px solid #e8412a;">
+              <img src="https://13n55.mjt.lu/img2/13n55/a7184e86-4bee-4a65-a58b-0c174e442aa1/content"
+                   alt="YouPol" width="100%" style="display:block; width:100%;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; border-left: 4px solid #e8412a; border-right: 4px solid #e8412a; border-bottom: 4px solid #e8412a;">
+              {{youpol}}
+            </td>
+          </tr>
+
+          <!-- ESPACE -->
+          <tr><td style="height: 24px;"></td></tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- RUBRIQUE : PASSION ARCHIVES (sans bordure) -->
+          <tr>
+            <td style="padding: 24px 0 0 0;">
+              <img src="https://13n55.mjt.lu/img2/13n55/bda9f86f-7105-4cb9-a95c-0a459ae462a7/content"
+                   alt="Passion Archives" width="600" style="display:block; width:100%; max-width:600px;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.7; color: #1a1a1a;">
+              {{passion_archives}}
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- RUBRIQUE : CA ARRIVE AUJOURD'HUI (sans bordure) -->
+          <tr>
+            <td style="padding: 24px 0 0 0;">
+              <img src="https://13n55.mjt.lu/img2/13n55/cbd34559-54ce-4e5d-a312-cc5ba8de9d22/content"
+                   alt="Ça arrive aujourd'hui" width="600" style="display:block; width:100%; max-width:600px;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.7; color: #1a1a1a;">
+              {{ca_arrive}}
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 1px solid #e0e0e0;" />
+            </td>
+          </tr>
+
+          <!-- RUBRIQUE : L'ADDITION (bordure bleu foncé épaisse bord à bord) -->
+          <tr>
+            <td style="padding: 0; border-left: 4px solid #1a1a3a; border-right: 4px solid #1a1a3a; border-top: 4px solid #1a1a3a;">
+              <img src="https://13n55.mjt.lu/img2/13n55/f57e43a4-d9d8-4174-b9fa-0665037d8651/content"
+                   alt="L'addition" width="100%" style="display:block; width:100%;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 20px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; border-left: 4px solid #1a1a3a; border-right: 4px solid #1a1a3a; border-bottom: 4px solid #1a1a3a;">
+              {{laddition}}
+            </td>
+          </tr>
+
+          <!-- ESPACE -->
+          <tr><td style="height: 24px;"></td></tr>
+
+          <!-- OUTRO -->
+          <tr>
+            <td style="padding: 16px 32px 24px 32px; font-family: Georgia, serif; font-size: 15px; line-height: 1.6; color: #1a1a1a; text-align:center;">
+              Sur ce, bonne journée 👋. Et à demain sur les routes de l'info.
+            </td>
+          </tr>
+
+          <!-- SEPARATEUR FOOTER -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <hr style="border: none; border-top: 2px solid #1a1a1a;" />
+            </td>
+          </tr>
+
+          <!-- FOOTER : Réseaux sociaux -->
+          <tr>
+            <td align="center" style="padding: 32px 32px 16px 32px;">
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding: 0 8px;">
+                    <a href="https://www.facebook.com/chezpol" style="text-decoration:none;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/960px-Logo_de_Facebook.png"
+                           alt="Facebook" width="32" height="32" style="display:block;" />
+                    </a>
+                  </td>
+                  <td style="padding: 0 8px;">
+                    <a href="https://twitter.com/chezpol" style="text-decoration:none;">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/X_logo_twitter_new_brand_icon.svg/3840px-X_logo_twitter_new_brand_icon.svg.png"
+                           alt="Twitter/X" width="32" height="32" style="display:block;" />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Logo footer -->
+          <tr>
+            <td align="center" style="padding: 16px 32px 8px 32px;">
+              <img src="https://13n55.mjt.lu/img2/13n55/25787b64-e6fc-4c1d-b670-862ea12b4465/content"
+               alt="Chez Pol" width="600" height="auto" style="border:none; display:block; outline:none; text-decoration:none; height:auto; width:100%; font-size:13px;" />
+              <!-- <img src="https://13n55.mjt.lu/img2/13n55/25787b64-e6fc-4c1d-b670-862ea12b4465/content"
+                   alt="Chez Pol" width="600" height="auto"; "display:block; margin: 0 auto;" /> -->
+            </td>
+          </tr>
+
+          <!-- Signature -->
+          <tr>
+            <td align="center" style="padding: 8px 32px 8px 32px; font-family: Georgia, serif; font-size: 13px; color: #666666; line-height: 1.6;">
+              <em>Chez Pol a été concoctée par</em><br/>
+              <span style="color: #e8412a;">Etienne Baldit, Sylvain Chazot et Sébastien Tronche</span>
+            </td>
+          </tr>
+
+          <!-- Désabonnement -->
+          <tr>
+            <td align="center" style="padding: 16px 32px 32px 32px; font-family: Arial, sans-serif; font-size: 11px; color: #999999;">
+              Cet email a été envoyé à [[EMAIL_TO]],
+              <a href="[[UNSUB_LINK_FR]]" style="color: #999999;">cliquez ici pour vous désabonner</a>.
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
