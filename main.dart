@@ -3,10 +3,10 @@ import 'models/google_client_account.dart';
 import 'services/google_doc_service.dart';
 import 'services/mailjet_service.dart';
 import 'utils/parse_doc.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:dotenv/dotenv.dart';
 
+final env = DotEnv(includePlatformEnvironment: true)..load();
 Future<void> main() async {
-  await dotenv.load();
   print("Transfert de la newsletter en cours...");
   Future.delayed(Duration(seconds: 5));
   final client = await GoogleClientAccount(

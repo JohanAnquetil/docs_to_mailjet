@@ -6,6 +6,8 @@ import '../constants/constants.dart';
 
 class MailjetImageService {
   Future<String?> uploadImage(String googleUrl) async {
+    final String mailjetCredentials =
+        '${Constants.apiKey}:${Constants.secretKey}';
     try {
       // 1. Télécharger l'image depuis Google
       final imageResponse = await http.get(Uri.parse(googleUrl));
@@ -19,8 +21,7 @@ class MailjetImageService {
               ? 'gif'
               : 'jpg';
 
-      final credentials = base64Encode(
-          utf8.encode('${Constants.apiKey}:${Constants.secretKey}'));
+      final credentials = base64Encode(utf8.encode(mailjetCredentials));
 
       // 2. Upload sur MailJet
       final request = http.MultipartRequest(

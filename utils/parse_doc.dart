@@ -1,19 +1,9 @@
 import 'package:googleapis/docs/v1.dart' as docs;
 import '../services/mailjet_image_service.dart';
 import 'build_html.dart';
+import './rubriques.dart';
 
 Future<Map<String, String>> parseDoc(docs.Document document) async {
-  final rubriques = {
-    'LE MENU DU JOUR': 'sommaire',
-    'AU COMPTOIR': 'au_comptoir',
-    'YOUPOL': 'youpol',
-    'PASSION ARCHIVES': 'passion_archives',
-    'CA ARRIVE AUJOURD\'HUI': 'ca_arrive',
-    'ÇA ARRIVE AUJOURD\'HUI': 'ca_arrive',
-    'L\'ADDITION': 'laddition',
-    'L\u2019ADDITION': 'laddition',
-  };
-
   final Map<String, StringBuffer> buffers = {
     'hashtags': StringBuffer(),
     'intro': StringBuffer(),

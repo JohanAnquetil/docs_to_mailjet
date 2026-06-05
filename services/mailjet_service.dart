@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import '../main.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants/constants.dart';
@@ -9,8 +9,8 @@ class MailjetService {
   Future<void> createCampaignDraft(Map<String, String> variables) async {
     final now = DateTime.now();
     final date = '${now.day}/${now.month}/${now.year}';
-    final name = dotenv.get('newsletter_name');
-    final int contactListId = int.parse((dotenv.get('contact_id_list')));
+    final name = env['newsletter_name']!;
+    final int contactListId = int.parse((env['contact_id_list']!));
 
     final credentials = base64Encode(
       utf8.encode('${Constants.apiKey}:${Constants.secretKey}'),
@@ -27,8 +27,8 @@ class MailjetService {
       },
       body: jsonEncode({
         'Locale': 'fr_FR',
-        'Sender': dotenv.get('sender_name'),
-        'SenderEmail': dotenv.get('sender_email'),
+        'Sender': env['sender_name'],
+        'SenderEmail': env['sender_email']!,
         'EditMode': 'html2',
         'Subject': '$name du $date',
         'ContactsListID': contactListId,
